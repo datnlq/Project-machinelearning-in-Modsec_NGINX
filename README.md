@@ -49,6 +49,87 @@ To get started with integrating TensorFlow into ModSecurity, follow these steps:
 - Conda
 - Orther Package (requirements.txt)
 
+
+### **Tree**
+
+```
+./
+├── README.md
+├── Sample_21_Dec_2024_07_52.txt
+├── build_lib
+│   ├── extension.txt
+│   ├── ngx_http_modsecurity_header_filter.c
+│   └── tokenizer.c
+├── csic2010_prepare_for_keras.py
+├── datasets
+│   ├── CSIC2010
+│   │   ├── cbow_w2v_baocao
+│   │   ├── cbow_w2v_last
+│   │   ├── model1
+│   │   │   ├── fingerprint.pb
+│   │   │   ├── keras_metadata.pb
+│   │   │   ├── saved_model.pb
+│   │   │   └── variables
+│   │   │       ├── variables.data-00000-of-00001
+│   │   │       └── variables.index
+│   │   ├── model9
+│   │   │   ├── fingerprint.pb
+│   │   │   ├── keras_metadata.pb
+│   │   │   ├── saved_model.pb
+│   │   │   └── variables
+│   │   │       ├── variables.data-00000-of-00001
+│   │   │       └── variables.index
+│   │   ├── model_csic
+│   │   │   ├── fingerprint.pb
+│   │   │   ├── keras_metadata.pb
+│   │   │   ├── saved_model.pb
+│   │   │   └── variables
+│   │   │       ├── variables.data-00000-of-00001
+│   │   │       └── variables.index
+│   │   ├── model_final_97
+│   │   │   ├── fingerprint.pb
+│   │   │   ├── keras_metadata.pb
+│   │   │   ├── saved_model.pb
+│   │   │   └── variables
+│   │   │       ├── variables.data-00000-of-00001
+│   │   │       └── variables.index
+│   │   ├── model_final_97_baocao
+│   │   │   ├── fingerprint.pb
+│   │   │   ├── keras_metadata.pb
+│   │   │   ├── saved_model.pb
+│   │   │   └── variables
+│   │   │       ├── variables.data-00000-of-00001
+│   │   │       └── variables.index
+│   │   ├── model_final_97_baocaoo
+│   │   │   ├── fingerprint.pb
+│   │   │   ├── keras_metadata.pb
+│   │   │   ├── saved_model.pb
+│   │   │   └── variables
+│   │   │       ├── variables.data-00000-of-00001
+│   │   │       └── variables.index
+│   │   └── model_final_batchsize_32
+│   │       ├── fingerprint.pb
+│   │       ├── keras_metadata.pb
+│   │       ├── saved_model.pb
+│   │       └── variables
+│   │           ├── variables.data-00000-of-00001
+│   │           └── variables.index
+│   ├── TongHop
+│   │   ├── anor-Parsed.txt
+│   │   ├── norm-Parsed.txt
+│   │   └── test.txt
+│   ├── baocao
+│   │   ├── 80_OK_csic2010-anomalous-test-parsed.txt
+│   │   ├── 80_OK_csic2010-normal-test-parsed.txt
+│   │   ├── anomalous-parsed.txt
+│   │   └── normal-parsed.txt
+│   ├── models_keras
+│   │   ├── model_cnn2d.keras
+│   │   └── model_lstm_cnn2d.keras
+│   └── token_baocao.txt
+└── requirements.txt
+```
+
 ### **Building the Library**
 
 1. **Compile as a Shared Library**:
@@ -79,6 +160,10 @@ To get started with integrating TensorFlow into ModSecurity, follow these steps:
    - Preprocess the data into a format suitable for training (e.g., tokenize and vectorize the input).
 
 2. **Train the TensorFlow Model**:
+```
+git clone https://github.com/datnlq/Project-machinelearning-in-Modsec_NGINX.git
+cd Project-machinelearning-in-Modsec_NGINX
+```
 
 ```
 python3 csic2010_prepare_for_keras.py
